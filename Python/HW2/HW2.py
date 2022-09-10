@@ -1,4 +1,2 @@
-bla bla bla bla
-foo
-for foo in bla bla:
-    bla bla
+#Здесь появится домашка №3. Скоро (наверное).
+111
