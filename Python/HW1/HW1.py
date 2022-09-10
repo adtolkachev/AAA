@@ -97,5 +97,3 @@ def step2_no_umbrella():
 
 if __name__ == '__main__':
     step1()
-
-#Тестовый комментарий
