@@ -109,7 +109,7 @@ def write_report_to_csv(report: list, output_path: str = OUTPUT_PATH) -> None:
         print(f'Файл сохранен в директорию {output_path}')
 
 
-def main_menu() -> None:
+def main_menu() -> None:  # основная функция главного меню
 
     """Основная функция - точка входа в приложение.
     Выводит на экран список команд, принимает номер
