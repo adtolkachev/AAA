@@ -152,5 +152,3 @@ def main_menu() -> None:
 
 if __name__ == '__main__':
     main_menu()
-
-
