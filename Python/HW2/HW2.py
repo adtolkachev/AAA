@@ -1,9 +1,7 @@
 
 import csv
-from importlib.resources import path
 from typing import DefaultDict
 from collections import defaultdict
-from venv import create
 
 def initial_csv_parser(path: str = '/Users/aleksejtolkacev/AAA/Python/HW2/Corp_Summary.csv') -> list:
 
