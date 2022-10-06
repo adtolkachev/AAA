@@ -3,7 +3,6 @@ import csv
 from typing import DefaultDict
 from collections import defaultdict
 
-# бла бла бла бла
 
 INPUT_PATH = '/Users/aleksejtolkacev/AAA/Python/HW2/Corp_Summary.csv'
 OUTPUT_PATH = '/Users/aleksejtolkacev/AAA/Python/HW2/output.csv'
