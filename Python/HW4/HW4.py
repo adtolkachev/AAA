@@ -38,9 +38,6 @@ class Advert(ColorizeMixin):
                 (Ошибка на этапе чтения исходного словаря)')
         self.__dict__.update(advert_mapper)
 
-    def __getattr__(self, item):
-        raise ValueError('Нет такого атрибута')
-
     def __repr__(self) -> str:
         """
         Строковой вывод при обращении к экземпляру класса,
@@ -137,7 +134,3 @@ if __name__ == '__main__':
     yellow_corgi = Advert(corgi_dict, color=33)
     print(yellow_corgi)
     print(yellow_corgi.location.address)
-
-    iphone.price = -20000
-
-    print(iphone)
