@@ -53,14 +53,13 @@ class Advert(ColorizeMixin):
         return self.__dict__.get('price', 0)
 
     @price.setter
-    def price(self, set_price):
+    def price(self, new_price):
         """
         Сеттер для цены - проверяет, вводится ли цена больше нуля
         """
-        if set_price < 0:
+        if new_price < 0:
             raise ValueError('Цена должна быть больше нуля!\
             (ошибка на этапе присвоения цены)')
-        # self.price = set_price
 
 
 class AdvertMapper:
