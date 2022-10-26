@@ -24,8 +24,10 @@ class ColorizeMixin:
 
 class Advert(ColorizeMixin):
 
-    '''Создает объект класса из словаря с возможностью обращения
-    к атрибутам через точку.'''
+    """
+    Создает объект класса из словаря с возможностью обращения
+    к атрибутам через точку.
+    """
 
     def __init__(self, mapping: Dict, color=0):
         """
@@ -64,8 +66,10 @@ class Advert(ColorizeMixin):
 
 class AdvertMapper:
 
-    '''Класс создает питонячий объект из JSON.
-    Вложенные словари распаршиваются как экземпляры этого же класса.'''
+    """
+    Класс создает питонячий объект из JSON.
+    Вложенные словари распаршиваются как экземпляры этого же класса.
+    """
 
     def __init__(self, json_dict):
         """
@@ -78,12 +82,6 @@ class AdvertMapper:
                 self.__dict__[key] = AdvertMapper(value)
             else:
                 self.__dict__[key] = value
-
-    def __str__(self):
-        """
-        Строковой вывод при обращении к экземпляру класса
-        """
-        return f'{self.__dict__}'
 
 
 if __name__ == '__main__':
