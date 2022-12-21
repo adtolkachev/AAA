@@ -1,0 +1,33 @@
+python -m pytespython -m pytest -v
+=============================================== test session starts ===============================================
+platform darwin -- Python 3.9.12, pytest-7.1.1, pluggy-1.0.0 -- /usr/local/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/aleksejtolkacev/testing-homework/testing-homework/issue-02
+plugins: anyio-3.5.0
+collected 3 items                                                                                                 
+
+test_morse.py::test_decode_regular[.- ...- .. - --- -....- .- -.-. .- -.. . -- -.---AVITO-ACADEMY] PASSED   [ 33%]
+test_morse.py::test_decode_regular[.. - ...   -... .-. .. - -. . -.--   -... .. - -.-. ....-ITS BRITNEY BITCH] FAILED [ 66%]
+test_morse.py::test_decode_regular[-- --- ... -.-. --- .-- ..--- ----- ..--- ..----MOSCOW2022] PASSED       [100%]
+
+==================================================== FAILURES =====================================================
+_________ test_decode_regular[.. - ...   -... .-. .. - -. . -.--   -... .. - -.-. ....-ITS BRITNEY BITCH] _________
+
+s = '.. - ...   -... .-. .. - -. . -.--   -... .. - -.-. ....', exp = 'ITS BRITNEY BITCH'
+
+    @pytest.mark.parametrize('s, exp', [
+        ('.- ...- .. - --- -....- .- -.-. .- -.. . -- -.--', 'AVITO-ACADEMY'),
+        ('.. - ...   -... .-. .. - -. . -.--   -... .. - -.-. ....', 'ITS BRITNEY BITCH'),
+        ('-- --- ... -.-. --- .-- ..--- ----- ..--- ..---', 'MOSCOW2022')
+    ])
+    def test_decode_regular(s, exp):
+>       assert decode(s) == exp
+E       AssertionError: assert 'ITSBRITNEYBITCH' == 'ITS BRITNEY BITCH'
+E         - ITS BRITNEY BITCH
+E         ?    -       -
+E         + ITSBRITNEYBITCH
+
+test_morse.py:11: AssertionError
+============================================= short test summary info =============================================
+FAILED test_morse.py::test_decode_regular[.. - ...   -... .-. .. - -. . -.--   -... .. - -.-. ....-ITS BRITNEY BITCH]
+=========================================== 1 failed, 2 passed in 0.14s ===========================================
