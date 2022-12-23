@@ -1,20 +1,25 @@
 import sys
-from datetime import datetime
+from task_1 import my_write
 
 
-def timed_output(function):
+def timed_output(function: callable) -> callable:
     """Добавляем к выводу текущее время"""
-    def wrapper(some_text):
-        current_datetime = str(datetime.now().replace(microsecond=0))
-        sys.stdout.write(f'[{current_datetime}]: ')
-        return function(some_text)
+
+    original_write = sys.stdout.write
+
+    def wrapper(*args, **kwargs) -> callable:
+        sys.stdout.write = my_write
+        result = function(*args, **kwargs)
+        sys.stdout.write = original_write
+        return result
+ 
     return wrapper
 
 
 @timed_output
 def print_greeting(name):
     """Приветствие с информацией о текущем времени"""
-    print(f'Hello, {name}!')
+    print(f'Hello, {name}')
 
 
 if __name__ == '__main__':
