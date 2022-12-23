@@ -49,18 +49,6 @@ class Pizza:
         return self.size == other.size and self.name == other.name
 
 
-def order(pizza: str, size: str = 'L', delivery: bool = False):
-    """Готовит и доставляет пиццу"""
-    pizza_for_order = Pizza(pizza, size)
-    print(pizza_for_order.__str__() + ':')
-    if pizza_for_order.size == 'L':
-        print('     Приготовили за 5 минут')
-    else:
-        print('     Приготовили за 15 минут')
-    if delivery:
-        print('     Доставили за 30 минут')
-
-
 def log(text: str) -> Callable:
     """Выводит время выполнения"""
     def wrapper(function: Callable) -> Callable:
