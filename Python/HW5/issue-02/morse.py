@@ -48,5 +48,5 @@ def decode(morse_message: str) -> str:
 
 if __name__ == '__main__':
     print(encode('AVITO-ACADEMY'))
-    print(encode('ITS BRITNEY BITCH'))
+    print(encode('ITSBRITNEYBITCH'))
     print(encode('MOSCOW2022'))

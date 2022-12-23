@@ -4,7 +4,7 @@ from morse import decode
 
 @pytest.mark.parametrize('s, exp', [
     ('.- ...- .. - --- -....- .- -.-. .- -.. . -- -.--', 'AVITO-ACADEMY'),
-    ('.. - ...   -... .-. .. - -. . -.--   -... .. - -.-. ....', 'ITS BRITNEY BITCH'),
+    ('.. - ...   -... .-. .. - -. . -.--   -... .. - -.-. ....', 'ITSBRITNEYBITCH'),
     ('-- --- ... -.-. --- .-- ..--- ----- ..--- ..---', 'MOSCOW2022')
 ])
 def test_decode_regular(s, exp):

@@ -1,6 +1,4 @@
 import pytest
-
-
 from one_hot_encoding import fit_transform
 
 

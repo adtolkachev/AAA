@@ -1,4 +1,4 @@
-% python -m doctest -v -o NORMALIZE_WHITESPACE morse.py
+(base) aleksejtolkacev@tolka4ev issue-01 % python -m doctest -v -o NORMALIZE_WHITESPACE morse.py
 Trying:
     encode(25 * '5')  # doctest: +ELLIPSIS
 Expecting:
@@ -16,10 +16,9 @@ Expecting:
     '.-. .- .- .-   .- .-- .-.'
 ok
 Trying:
-    encode('Авита')
+    encode('SOS')
 Expecting:
-    Traceback (most recent call last):
-    KeyError: 'А'
+    '... --- ...'
 ok
 Trying:
     encode('AVITO')
